@@ -6,8 +6,8 @@ import cStringIO
 from PythonMagick import Image
 
 __module_name__ = 'clipmage' 
-__module_version__ = '0.1' 
-__module_description__ = 'Uploads an image on the clipboard to i.minus.com and post the url.' 
+__module_version__ = '0.2' 
+__module_description__ = 'Uploads an image on the clipboard to imgur.com and post the url.' 
 
 def screenshot(word, word_eol, userdata):
     try:
