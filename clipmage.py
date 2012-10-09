@@ -26,7 +26,10 @@ def screenshot(word, word_eol, userdata):
     c.perform()
     c.close()
     os.remove('clipmage.png')
-    xchat.command('say %s' % response.getvalue().split('<original>')[1].split('</original>')[0])
+    try:
+        xchat.command('say %s' % response.getvalue().split('<original>')[1].split('</original>')[0])
+    except IndexError:
+        xchat.prnt('couldn\'t upload the image')
     return xchat.EAT_ALL
 
 
